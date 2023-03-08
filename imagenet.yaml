@@ -1,0 +1,42 @@
+# Perform Single Image Super Resulution (SISR) restoration task on the given image.
+
+# the desired up-sampling factor (type: int, default: 4)
+scale_factor: 4
+
+# the estimated standard deviation of the noise present in the image (type: Optional[float], default: 15.0)
+noise_sigma: 15
+
+# high-resolution image dataset from hugging-face datasets' hub (type: str, default: imagenet-1k)
+dataset: imagenet-1k
+
+split: validation
+
+# The field (column) where PIL images are to be found in the dataset
+# (i.e. "imagenet-1k" --> `image_key`="image", "cifar10" --> `image_key`="img")
+# Default behaviour is to search among {"image", "images", "img"} (type: Optional[str], default: null)
+image_key: null
+
+# local cache directory for the dataset (type: Optional[str], default: null)
+dataset_cache_dir: /mnt/data/home/ubuntu/.cache/huggingface/datasets/
+
+# the batch size per-process (per-gpu) (type: int, default: 100)
+batch_size: 50
+
+# specifies the number of VAE posterior samples (if ``None``, will use the posterior mean) (type: Optional[int], default: 1)
+posterior_samples: 1
+
+# The dimension on which the transport is performed:
+# ``embed="image"``: transport the whole latent image
+# ``embed="pixel"``: transport each needle separately
+# ``embed="channel"``: transport each channel separatel (type: Literal['pixel', 'channel', 'image'], default: image)
+embed: image
+
+# the number of transport step (type: int, default: 1)
+n_steps: 1
+cumulate_transports: false
+
+# if ``True`` will split the training data to non-overlapping partitions (clean, degraded) (type: bool, default: True)
+unpaired: true
+
+# if ``True`` will save the result with .pgf extension for LaTex integration (type: bool, default: False)
+tex: false

@@ -1,0 +1,10 @@
+dataset_name: CIFAR10
+data_dir: ~/.cache
+degradation:
+  class_path: utils.Downsample
+  init_args:
+    size: 224
+    scale_factor: 4
+image_key: img
+batch_size: 100
+normalize: true

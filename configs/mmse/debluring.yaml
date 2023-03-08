@@ -1,0 +1,6 @@
+degradation:
+  class_path: utils.Blur
+  init_args:
+    kernel_size: 11
+    sigma: [6, 6]
+tags: [blur]

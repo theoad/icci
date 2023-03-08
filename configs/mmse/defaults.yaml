@@ -1,0 +1,12 @@
+dataset_name: ImageNet
+data_dir: /home/theoad/data/ImageNet
+capacity: 64
+attn_max_resolution: 8
+epoch: 20
+lr: 0.0001
+batch_size: 16
+num_workers: 10
+logger: tensorboard
+ckpt: null
+val_interval: 1
+debug: false

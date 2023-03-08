@@ -1,0 +1,18 @@
+degradation:
+  class_path: utils.Downsample
+  init_args:
+    size: 32
+    scale_factor: 2
+dataset_name: CIFAR10
+data_dir: /home/theoad/.cache/
+image_key: img
+min_channel: 16
+max_channel: 128
+epoch: 3
+lr: 0.001
+batch_size: 50
+num_workers: 10
+logger: tensorboard
+ckpt: null
+val_interval: 1.0
+debug: false

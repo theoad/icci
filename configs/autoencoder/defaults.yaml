@@ -1,0 +1,10 @@
+dataset_name: ImageNet
+data_dir: /home/theoad/data/ImageNet
+epoch: 10
+lr: 0.0002
+batch_size: 32
+num_workers: 10
+logger: tensorboard
+ckpt: null
+val_interval: 1
+debug: false

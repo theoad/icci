@@ -1,0 +1,21 @@
+# pytorch
+torch
+torchvision
+torchmetrics[image]
+einops
+tensorboard
+
+# hugging-face
+transformers
+accelerate
+diffusers
+datasets
+
+# general
+matplotlib
+jsonargparse[all]
+lovely_tensors
+wandb
+sympy
+ipython
+

@@ -1,0 +1,7 @@
+dataset_name: ImageNet
+data_dir: /home/theoad/data/ImageNet
+batch_size: 10
+num_workers: 10
+n_steps: 2
+n_plot_samples: 4
+tex: false

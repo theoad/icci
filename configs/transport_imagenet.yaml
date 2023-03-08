@@ -1,0 +1,14 @@
+degradation:
+  class_path: utils.Downsample
+  init_args:
+    size: 224
+    scale_factor: 4
+mmse_pretrained: ../icci/logs/mmse-train/best-ckpt/pretrained
+dataset: ImageNet
+data_dir: /home/theoad/data/ImageNet
+image_key: image
+batch_size: 100
+n_steps: 2
+n_plot_samples: 4
+out_dir: results_pixel
+tex: false

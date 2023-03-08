@@ -1,0 +1,5 @@
+degradation:
+  class_path: utils.AddGaussianNoise
+  init_args:
+    sigma: 50
+tags: [denoising]
